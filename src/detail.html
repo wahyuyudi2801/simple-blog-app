@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Detail Artikel - Travel Blog</title>
+  </head>
+  <body class="bg-slate-50 font-sans text-slate-800">
+    <!-- Navbar -->
+    <nav class="bg-emerald-400 text-white sticky top-0 z-50 shadow-md">
+      <div
+        class="container py-3 flex justify-between items-center mx-auto px-4"
+      >
+        <div class="flex items-center gap-10">
+          <div
+            class="border-2 border-white px-4 py-1 leading-tight tracking-widest font-bold text-xl cursor-pointer"
+          >
+            TRAVEL
+          </div>
+          <ul class="hidden lg:flex gap-6 font-medium">
+            <li class="hover:text-emerald-100 cursor-pointer transition">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="hover:text-emerald-100 cursor-pointer transition">
+              <a href="./index.html">About Us</a>
+            </li>
+            <li class="hover:text-emerald-100 cursor-pointer transition">
+              <a href="./index.html">Bookings</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div id="auth-buttons" class="hidden md:flex items-center gap-2">
+            <button
+              class="px-4 py-2 hover:text-emerald-100 font-semibold transition"
+            >
+              Login
+            </button>
+            <button
+              class="bg-white text-emerald-500 px-5 py-2 rounded-full font-bold shadow-md hover:bg-emerald-50 transition"
+            >
+              Register
+            </button>
+          </div>
+
+          <div class="relative group">
+            <button
+              id="profile-btn"
+              class="flex items-center gap-2 bg-emerald-500/50 p-1 pr-4 rounded-full hover:bg-emerald-500 transition border border-emerald-300"
+            >
+              <img
+                src="https://i.pravatar.cc/150?u=user123"
+                alt="Avatar"
+                class="w-8 h-8 rounded-full border border-white"
+              />
+              <span class="text-sm font-semibold hidden sm:inline"
+                >Alex Doe</span
+              >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <div
+              class="absolute right-0 mt-0.5 w-48 bg-white rounded-xl shadow-xl border border-slate-100 hidden group-hover:block overflow-hidden animate-in fade-in zoom-in duration-200"
+            >
+              <a
+                href="#"
+                class="block px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition"
+                >My Profile</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition border-b"
+                >Settings</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-3 text-sm text-red-500 hover:bg-red-50 transition"
+                >Logout</a
+              >
+            </div>
+          </div>
+
+          <button id="menu-btn" class="block lg:hidden focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 lg:py-12">
+      <div class="max-w-3xl mx-auto">
+        <header class="mb-8">
+          <nav
+            class="flex text-sm text-emerald-500 font-bold uppercase tracking-wider mb-4"
+          >
+            <a href="#" class="hover:underline">Nature</a>
+            <span class="mx-2 text-slate-300">/</span>
+            <a href="#" class="hover:underline">Island</a>
+          </nav>
+          <h1
+            class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6"
+          >
+            Menjelajahi Keindahan Tersembunyi di Sisi Utara Bali
+          </h1>
+          <div class="flex items-center gap-4 text-slate-500">
+            <img
+              src="https://i.pravatar.cc/150?u=author"
+              alt="Author"
+              class="w-12 h-12 rounded-full border-2 border-emerald-400"
+            />
+            <div>
+              <p class="font-bold text-slate-800 text-sm">Rizky Ramadhan</p>
+              <p class="text-xs">Diterbitkan pada 2 Jan 2026 • 12:00</p>
+            </div>
+          </div>
+        </header>
+
+        <img
+          src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+          alt="Bali"
+          class="w-full h-[400px] object-cover rounded-2xl shadow-lg mb-10"
+        />
+
+        <article
+          class="prose prose-slate lg:prose-xl max-w-none leading-relaxed text-lg text-slate-700"
+        >
+          <p class="mb-6">
+            Bali utara seringkali terabaikan oleh para wisatawan yang lebih
+            memilih keramaian Canggu atau keindahan pura di Ubud. Namun, bagi
+            mereka yang mencari ketenangan dan keaslian alam, daerah seperti
+            <strong>Munduk</strong> dan <strong>Lovina</strong> menawarkan
+            pengalaman yang tak terlupakan.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
+            Air Terjun yang Menyegarkan Mata
+          </h2>
+          <p class="mb-6">
+            Di sini, Anda akan menemukan deretan air terjun megah seperti
+            Sekumpul yang dikelilingi oleh hutan hujan tropis yang lebat. Udara
+            yang sejuk dan suara gemericik air menjadi terapi alami bagi jiwa
+            yang lelah dengan hiruk-pikuk kota.
+          </p>
+          <blockquote
+            class="border-l-4 border-emerald-400 pl-6 italic my-8 text-slate-600 bg-emerald-50 py-4 pr-4"
+          >
+            "Perjalanan ke utara bukan sekadar berpindah lokasi, tapi tentang
+            menemukan kembali sisi tenang dari Pulau Dewata."
+          </blockquote>
+        </article>
+
+        <hr class="my-12 border-slate-200" />
+
+        <section id="comments">
+          <h3
+            class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2"
+          >
+            Komentar
+            <span
+              class="bg-slate-200 text-slate-600 text-sm px-2 py-1 rounded-md"
+              >2</span
+            >
+          </h3>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 mb-10"
+          >
+            <h4 class="font-bold mb-4">Tinggalkan Komentar</h4>
+            <form action="#" class="space-y-4">
+              <textarea
+                rows="4"
+                placeholder="Bagikan pemikiranmu..."
+                class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:outline-none"
+              ></textarea>
+              <button
+                class="bg-emerald-500 text-white px-8 py-2 rounded-lg font-bold hover:bg-emerald-600 transition shadow-lg shadow-emerald-200"
+              >
+                Kirim Komentar
+              </button>
+            </form>
+          </div>
+
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <img
+                src="https://i.pravatar.cc/150?u=user1"
+                alt="User"
+                class="w-10 h-10 rounded-full shrink-0"
+              />
+              <div
+                class="flex-1 bg-white p-5 rounded-2xl shadow-sm border border-slate-50"
+              >
+                <div class="flex justify-between items-center mb-2">
+                  <h5 class="font-bold text-slate-800">Andi Wijaya</h5>
+                  <span class="text-xs text-slate-400">2 jam yang lalu</span>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Wah, saya baru saja ke Munduk minggu lalu! Benar-benar sejuk
+                  dan jauh dari keramaian. Artikel yang sangat akurat!
+                </p>
+                <!-- <button
+                  class="mt-3 text-xs font-bold text-emerald-500 hover:text-emerald-700"
+                >
+                  Balas
+                </button> -->
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <img
+                src="https://i.pravatar.cc/150?u=user2"
+                alt="User"
+                class="w-10 h-10 rounded-full shrink-0"
+              />
+              <div
+                class="flex-1 bg-white p-5 rounded-2xl shadow-sm border border-slate-50"
+              >
+                <div class="flex justify-between items-center mb-2">
+                  <h5 class="font-bold text-slate-800">Siti Aminah</h5>
+                  <span class="text-xs text-slate-400">1 jam yang lalu</span>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Setuju banget kak Andi! Jangan lupa mampir ke warung lokal di
+                  sana, kopinya juara.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-10 mt-20">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-xs">&copy; 2026 Travel Blog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

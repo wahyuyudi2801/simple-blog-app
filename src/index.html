@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Travel Blog</title>
+  </head>
+  <body class="bg-slate-50 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-emerald-400 text-white sticky top-0 z-50 shadow-md">
+      <div
+        class="container py-3 flex justify-between items-center mx-auto px-4"
+      >
+        <div class="flex items-center gap-10">
+          <div
+            class="border-2 border-white px-4 py-1 leading-tight tracking-widest font-bold text-xl cursor-pointer"
+          >
+            TRAVEL
+          </div>
+          <ul class="hidden lg:flex gap-6 font-medium">
+            <li class="hover:text-emerald-100 cursor-pointer transition">
+              Home
+            </li>
+            <li class="hover:text-emerald-100 cursor-pointer transition">
+              About Us
+            </li>
+            <li class="hover:text-emerald-100 cursor-pointer transition">
+              Bookings
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <!-- Login Register -->
+          <div id="auth-buttons" class="hidden md:flex items-center gap-2">
+            <button
+              class="px-4 py-2 hover:text-emerald-100 font-semibold transition"
+            >
+              Login
+            </button>
+            <button
+              class="bg-white text-emerald-500 px-5 py-2 rounded-full font-bold shadow-md hover:bg-emerald-50 transition"
+            >
+              Register
+            </button>
+          </div>
+
+          <!-- Profile -->
+          <div class="relative group">
+            <button
+              id="profile-btn"
+              class="flex items-center gap-2 bg-emerald-500/50 p-1 pr-4 rounded-full hover:bg-emerald-500 transition border border-emerald-300"
+            >
+              <img
+                src="https://i.pravatar.cc/150?u=user123"
+                alt="Avatar"
+                class="w-8 h-8 rounded-full border border-white"
+              />
+              <span class="text-sm font-semibold hidden sm:inline"
+                >Alex Doe</span
+              >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <div
+              class="absolute right-0 mt-0.5 w-48 bg-white rounded-xl shadow-xl border border-slate-100 hidden group-hover:block overflow-hidden animate-in fade-in zoom-in duration-200"
+            >
+              <a
+                href="#"
+                class="block px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition"
+                >My Profile</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition border-b"
+                >Settings</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-3 text-sm text-red-500 hover:bg-red-50 transition"
+                >Logout</a
+              >
+            </div>
+          </div>
+
+          <button id="menu-btn" class="block lg:hidden focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Header -->
+    <header class="bg-white border-b">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center py-10 gap-6"
+      >
+        <div>
+          <h1 class="font-bold text-4xl text-slate-800">Our Blog</h1>
+          <p class="text-slate-500 mt-2">
+            Temukan cerita perjalanan menarik dari seluruh dunia.
+          </p>
+        </div>
+        <div class="w-full md:w-auto">
+          <form class="flex shadow-sm">
+            <input
+              type="search"
+              placeholder="Cari artikel..."
+              class="w-full md:w-64 px-4 py-2 border border-slate-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition"
+            />
+            <button
+              class="bg-emerald-400 text-white px-6 py-2 rounded-r-lg font-semibold hover:bg-emerald-500 transition"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Content -->
+    <main class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Article -->
+        <article
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+            alt="Pantai"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <span
+              class="text-emerald-500 text-xs font-bold uppercase tracking-wider"
+              >Nature</span
+            >
+            <a href="./detail.html">
+              <h2
+                class="text-xl font-bold text-slate-800 mt-2 mb-3 hover:text-emerald-500 cursor-pointer"
+              >
+                Menjelajahi Keindahan Tersembunyi di Bali
+              </h2>
+            </a>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Bali bukan hanya tentang Kuta. Mari kita intip sisi utara yang
+              masih asri dan tenang...
+            </p>
+            <div class="flex items-center text-xs text-slate-400 font-medium">
+              <span>28 Des 2025 • 12:00</span>
+            </div>
+          </div>
+        </article>
+        <!-- End Article -->
+
+        <!-- Article -->
+        <article
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600&q=80"
+            alt="Gunung"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <span
+              class="text-emerald-500 text-xs font-bold uppercase tracking-wider"
+              >Adventure</span>
+            <h2
+              class="text-xl font-bold text-slate-800 mt-2 mb-3 hover:text-emerald-500 cursor-pointer"
+            >
+              Tips Mendaki Aman untuk Pemula
+            </h2>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Persiapan fisik dan mental adalah kunci. Simak perlengkapan wajib
+              yang harus dibawa...
+            </p>
+            <div class="flex items-center text-xs text-slate-400 font-medium">
+              <span>28 Des 2025 • 12:00</span>
+            </div>
+          </div>
+        </article>
+        <!-- End Article -->
+
+        <!-- Article -->
+        <article
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&w=600&q=80"
+            alt="Hotel"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <span
+              class="text-emerald-500 text-xs font-bold uppercase tracking-wider"
+              >Lifestyle</span
+            >
+            <h2
+              class="text-xl font-bold text-slate-800 mt-2 mb-3 hover:text-emerald-500 cursor-pointer"
+            >
+              5 Hotel Mewah dengan View Terbaik
+            </h2>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Ingin bangun tidur dengan pemandangan pegunungan? Ini daftar hotel
+              rekomendasi kami...
+            </p>
+            <div class="flex items-center text-xs text-slate-400 font-medium">
+              <span>28 Des 2025 • 12:00</span>
+            </div>
+          </div>
+        </article>
+        <!-- End Article -->
+      </div>
+
+      <div class="mt-12 flex justify-center">
+        <button
+          class="px-6 py-2 border border-emerald-400 text-emerald-500 font-semibold rounded-full hover:bg-emerald-400 hover:text-white transition"
+        >
+          Load More Stories
+        </button>
+      </div>
+    </main>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-10 mt-12">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="border-2 border-white inline-block px-4 py-1 text-white font-bold tracking-widest mb-4"
+        >
+          TRAVEL
+        </div>
+        <p class="text-sm mb-6">
+          Inspirasi perjalanan setiap hari langsung ke perangkat Anda.
+        </p>
+        <div class="flex justify-center gap-6 mb-8 text-white">
+          <a href="#" class="hover:text-emerald-400">Instagram</a>
+          <a href="#" class="hover:text-emerald-400">Twitter</a>
+          <a href="#" class="hover:text-emerald-400">Facebook</a>
+        </div>
+        <div class="text-xs">&copy; 2026 Travel Blog. All rights reserved.</div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      });
+    </script>
+  </body>
+</html>
